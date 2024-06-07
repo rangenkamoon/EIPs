@@ -1,7 +1,8 @@
 # Ethereum Improvement Proposals (EIPs)
 
 > **_ATTENTION_**: The EIPs repository has recently [undergone](https://github.com/ethereum/EIPs/pull/7206) a separation of ERCs and EIPs. ERCs are now accessible at [https://github.com/ethereum/ercs](https://github.com/ethereum/ercs). All new ERCs and updates to existing ones must be directed at this new repository. The editors apologize for this inconvenience.
-
+cargo install eipv
+eipv <INPUT FILE / DIRECTORY>
 The goal of the EIP project is to standardize and provide high-quality documentation for Ethereum itself and conventions built upon it. This repository tracks past and ongoing improvements to Ethereum in the form of Ethereum Improvement Proposals (EIPs). [EIP-1](https://eips.ethereum.org/EIPS/eip-1) governs how EIPs are published.
 
 The [status page](https://eips.ethereum.org/) tracks and lists EIPs, which can be divided into the following categories:
@@ -14,7 +15,7 @@ The [status page](https://eips.ethereum.org/) tracks and lists EIPs, which can b
 - [Informational EIPs](https://eips.ethereum.org/informational) are non-standard improvements that do not require any form of consensus.
 
 **Before you write an EIP, ideas MUST be thoroughly discussed on [Ethereum Magicians](https://ethereum-magicians.org/) or [Ethereum Research](https://ethresear.ch/t/read-this-before-posting/8). Once consensus is reached, thoroughly read and review [EIP-1](https://eips.ethereum.org/EIPS/eip-1), which describes the EIP process.**
-
+ruby --version
 Please note that this repository is for documenting standards and not for help implementing them. These types of inquiries should be directed to the [Ethereum Stack Exchange](https://ethereum.stackexchange.com). For specific questions and concerns regarding EIPs, it's best to comment on the relevant discussion thread of the EIP denoted by the `discussions-to` tag in the EIP's preamble.
 
 If you would like to become an EIP Editor, please read [EIP-5069](./EIPS/eip-5069.md).
@@ -22,20 +23,20 @@ If you would like to become an EIP Editor, please read [EIP-5069](./EIPS/eip-506
 ## Preferred Citation Format
 
 The canonical URL for an EIP that has achieved draft status at any point is at <https://eips.ethereum.org/>. For example, the canonical URL for EIP-1 is <https://eips.ethereum.org/EIPS/eip-1>.
-
+bundle install
 Consider any document not published at <https://eips.ethereum.org/> as a working paper. Additionally, consider published EIPs with a status of "draft", "review", or "last call" to be incomplete drafts, and note that their specification is likely to be subject to change.
 
 ## Validation and Automerging
 
 All pull requests in this repository must pass automated checks before they can be automatically merged:
-
+gem install bundler
 - [eip-review-bot](https://github.com/ethereum/eip-review-bot/) determines when PRs can be automatically merged [^1]
 - EIP-1 rules are enforced using [`eipw`](https://github.com/ethereum/eipw)[^2]
 - HTML formatting and broken links are enforced using [HTMLProofer](https://github.com/gjtorikian/html-proofer)[^2]
 - Spelling is enforced with [CodeSpell](https://github.com/codespell-project/codespell)[^2]
   - False positives sometimes occur. When this happens, please submit a PR editing [.codespell-whitelist](https://github.com/ethereum/EIPs/blob/master/config/.codespell-whitelist) and **ONLY** .codespell-whitelist
 - Markdown best practices are checked using [markdownlint](https://github.com/DavidAnson/markdownlint)[^2]
-
+bundle exec jekyll serve
 [^1]: https://github.com/ethereum/EIPs/blob/master/.github/workflows/auto-review-bot.yml
 [^2]: https://github.com/ethereum/EIPs/blob/master/.github/workflows/ci.yml
 
